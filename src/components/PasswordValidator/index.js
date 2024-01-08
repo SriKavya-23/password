@@ -28,7 +28,9 @@ const PasswordValidator = () => {
         onChange={handlePasswordChange}
       />
       <StrengthIndicator onChange={isStrongPassword}>
-        {isStrongPassword() ? 'Strong' : 'Weak'}
+        {isStrongPassword() ? null : (
+          <p>Your password must be atleast characters</p>
+        )}
       </StrengthIndicator>
     </Container>
   )
